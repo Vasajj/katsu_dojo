@@ -138,6 +138,8 @@ class _FullScreenState extends State<FullScreen> {
   @override
   void initState() {
     super.initState();
+
+    //here I want to refer to the url from the class YoutubeList()
     _controller = YoutubePlayerController(
       initialVideoId: YoutubePlayer.convertUrlToId(url),
       flags: const YoutubePlayerFlags(
