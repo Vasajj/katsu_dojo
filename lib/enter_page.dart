@@ -1,24 +1,29 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'article_screen.dart';
 
-class EnterPage extends StatelessWidget {
+class EnterPage extends StatefulWidget {
+  @override
+  _EnterPageState createState() => _EnterPageState();
+}
+
+class _EnterPageState extends State<EnterPage> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(
+        Duration(seconds: 2),
+            () => Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (BuildContext context) => ArticleScreen())));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff414F69),
       body: Center(
-          child: Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [Colors.indigo, Colors.indigoAccent],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight),
-              ),
-              child: ConstrainedBox(
-                  constraints: BoxConstraints.expand(),
-                  child: FlatButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '8');
-                      },
-                      padding: EdgeInsets.all(0.0),
-                      child: Image.asset('images/katsudojo.png'))))),
+        child: Image.asset('images/katsudojo.png'),
+      ),
     );
   }
 }
