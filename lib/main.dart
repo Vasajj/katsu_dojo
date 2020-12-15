@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-// import 'package:flutter/services.dart';
 import 'enter_page.dart';
-import 'youtube/video_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'article_screen.dart';
 
 
 
@@ -27,7 +26,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '1': (context) => EnterPage(),
 
-        '8': (context) => VideoScreen(),
+        '8': (context) => AricleScreen(),
       },
     );
   }
