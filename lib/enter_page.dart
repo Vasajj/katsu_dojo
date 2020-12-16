@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'article_screen.dart';
 
+
 class EnterPage extends StatefulWidget {
   @override
   _EnterPageState createState() => _EnterPageState();

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'enter_page.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'article_screen.dart';
+import 'philosophical_page.dart';
 
 
 
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '1': (context) => EnterPage(),
 
-        '8': (context) => ArticleScreen(),
+        '2': (context) => PhilosophyScreen(),
       },
     );
   }

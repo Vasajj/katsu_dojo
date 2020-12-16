@@ -4,8 +4,6 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
 
-//в розробці
-
 
 class PhilosophyScreen extends StatefulWidget {
   PhilosophyScreen();
@@ -27,6 +25,15 @@ class PhilosophyScreenState extends State<PhilosophyScreen> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey,
+      appBar: AppBar(
+        backgroundColor: Color(0xff414F69),
+        leading: BackButton(
+            color: Colors.white
+        ),
+        title: Text("Новини"),
+        centerTitle: true,
+      ),
       floatingActionButton: null,
       body: StreamBuilder(
           stream: FirebaseFirestore.instance.collection('Philosophy').snapshots(),
@@ -51,7 +58,7 @@ class PhilosophyScreenState extends State<PhilosophyScreen> {
                     ),
                     child: MaterialButton(
                       onPressed: () {
-                        _launchURL(document.data()['title']);
+                        _launchURL(document.data()['image']);
                       },
                       child: Column(
                         children: <Widget>[
@@ -59,7 +66,7 @@ class PhilosophyScreenState extends State<PhilosophyScreen> {
                             padding: EdgeInsets.symmetric(vertical: 5),
                             child: Text(document.data()['title'],
                                 style: TextStyle(
-                                  color: Colors.white,fontSize: 18.0,
+                                  color: Colors.white54,fontSize: 18.0,
                                 )),
                           ),
                           Padding(
