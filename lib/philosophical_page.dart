@@ -25,7 +25,7 @@ class PhilosophyScreenState extends State<PhilosophyScreen> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Color(0xff2f3c54),
       appBar: AppBar(
         backgroundColor: Color(0xff414F69),
         leading: BackButton(
@@ -54,11 +54,11 @@ class PhilosophyScreenState extends State<PhilosophyScreen> {
                     width: MediaQuery.of(context).size.width / 1.0,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
-                      color: Color(0xff414F69),
+                      color: Color(0xff2f3c54),
                     ),
                     child: MaterialButton(
                       onPressed: () {
-                        _launchURL(document.data()['image']);
+                        _launchURL(document.data()['title']);
                       },
                       child: Column(
                         children: <Widget>[
