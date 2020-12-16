@@ -21,15 +21,19 @@ class ArticleScreenState extends State<ArticleScreen> {
     }
   }
 
+
+
+
+
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Color(0xff2f3c54),
       appBar: AppBar(
         title: Text(
           'Віртуальне доджо',
         ),
         centerTitle: true,
-        backgroundColor: Color(0xff414F69),
+        backgroundColor: Color(0xff414f69),
         leading: GestureDetector(
           onTap: () {
             Navigator.pushNamed(context, '2');
@@ -54,12 +58,12 @@ class ArticleScreenState extends State<ArticleScreen> {
               children: snapshot.data.docs.map((document) {
                 print(document.data()['url'].toString());
                 return Padding(
-                  padding: EdgeInsets.only(top: 10),
+                  padding: EdgeInsets.only(top: 20),
                   child: Container(
                     width: MediaQuery.of(context).size.width / 1.0,
                     decoration: BoxDecoration(
                       // borderRadius: BorderRadius.circular(15.0),
-                      color: Colors.indigo,
+                      color: Color(0xff2f3c54),
                     ),
                     child: MaterialButton(
                       onPressed: () {
@@ -68,11 +72,11 @@ class ArticleScreenState extends State<ArticleScreen> {
                       child: Column(
                         children: <Widget>[
                           Padding(
-                            padding: EdgeInsets.symmetric(vertical: 5),
+                            padding: EdgeInsets.symmetric(vertical: 7),
                             child: Text(document.data()['title'],
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  color: Colors.blueGrey,
+                                  color: Colors.blueGrey[50],
                                   fontSize: 18.0,
                                 )),
                           ),
@@ -98,3 +102,4 @@ class ArticleScreenState extends State<ArticleScreen> {
     );
   }
 }
+
