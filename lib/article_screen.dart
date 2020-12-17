@@ -16,13 +16,11 @@ class ArticleScreenState extends State<ArticleScreen> {
   _launchURL(String url) async {
     if (await canLaunch(url)) {
       await launch(url);
+      print ('all is fine');
     } else {
       throw 'Не вдається завантажити $url';
     }
   }
-
-
-
 
 
   Widget build(BuildContext context) {
